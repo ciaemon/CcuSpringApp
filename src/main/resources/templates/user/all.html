@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>All users</title>
+</head>
+<body>
+<div th:each="user : ${users}">
+    <p th:text="${user.getName()}">name</p>
+    <a th:text="Delete" th:href="@{/user/delete/${id}(id=${user.getId()})}"></a>
+</div>
+</body>
+</html>
